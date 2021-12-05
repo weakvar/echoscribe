@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Nuke
 
 final class SubscriptionsItemCell: UITableViewCell {
     
@@ -99,7 +100,17 @@ final class SubscriptionsItemCell: UITableViewCell {
     // MARK: - UITableViewCell Lifecycle
     
     override func prepareForReuse() {
-        // TODO: Implement this method
+        self.logoImageView.image = nil
+        self.nameLabel.text = nil
+        self.paymentDateLabel.text = nil
+    }
+    
+    // MARK: - Public Methods
+    
+    func setup(with subscription: Subscription) {
+        setLogoImage(fromUrl: subscription.service.logoUrl)
+        setName(subscription.service.name)
+        setPaymentDate(subscription.paymentDate)
     }
     
     // MARK: - View Configuration
@@ -163,6 +174,26 @@ final class SubscriptionsItemCell: UITableViewCell {
             labelsStackView.bottomAnchor
                 .constraint(equalTo: self.contentView.bottomAnchor, constant: -8)
         ])
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setLogoImage(fromUrl logoUrl: String) {
+        if let url = URL(string: logoUrl) {
+            Nuke.loadImage(with: url, into: logoImageView)
+        }
+    }
+    
+    private func setName(_ name: String) {
+        nameLabel.text = name
+    }
+    
+    private func setPaymentDate(_ date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        let paymentDate = dateFormatter.string(from: date)
+        paymentDateLabel.text = paymentDate
     }
     
 }
