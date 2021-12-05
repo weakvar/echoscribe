@@ -49,7 +49,7 @@ final class SubscriptionsViewController: UIViewController {
     }
     
     private func configureNavigationItem() {
-        self.navigationItem.title = "Подписки"
+        self.navigationItem.title = "Subscriptions".localized()
         self.navigationItem.largeTitleDisplayMode = .always
     }
     

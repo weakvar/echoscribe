@@ -42,11 +42,9 @@ final class SubscriptionsItemCell: UITableViewCell {
     private lazy var paymentDescriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .subheadline)
+        label.text = "Next Withdrawal".localized()
         label.textColor = .secondaryLabel
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        // TODO: Remove this hardcode
-        label.text = "Следующее списание"
         
         return label
     }()
