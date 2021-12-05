@@ -10,6 +10,11 @@
 		86E4E713275BF6A50078249A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E712275BF6A50078249A /* AppDelegate.swift */; };
 		86E4E71C275BF6A60078249A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E71B275BF6A60078249A /* Assets.xcassets */; };
 		86E4E71F275BF6A60078249A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E71D275BF6A60078249A /* LaunchScreen.storyboard */; };
+		86E4E72C275C08A20078249A /* SubscriptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E728275C08A20078249A /* SubscriptionsPresenter.swift */; };
+		86E4E72D275C08A20078249A /* SubscriptionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E729275C08A20078249A /* SubscriptionsRouter.swift */; };
+		86E4E72E275C08A20078249A /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E72A275C08A20078249A /* SubscriptionsViewController.swift */; };
+		86E4E72F275C08A20078249A /* SubscriptionsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E72B275C08A20078249A /* SubscriptionsAssembly.swift */; };
+		86E4E734275C12330078249A /* SubscriptionsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E733275C12330078249A /* SubscriptionsItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +23,11 @@
 		86E4E71B275BF6A60078249A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E4E71E275BF6A60078249A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86E4E720275BF6A60078249A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86E4E728275C08A20078249A /* SubscriptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsPresenter.swift; sourceTree = "<group>"; };
+		86E4E729275C08A20078249A /* SubscriptionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsRouter.swift; sourceTree = "<group>"; };
+		86E4E72A275C08A20078249A /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
+		86E4E72B275C08A20078249A /* SubscriptionsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsAssembly.swift; sourceTree = "<group>"; };
+		86E4E733275C12330078249A /* SubscriptionsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,7 @@
 		86E4E711275BF6A50078249A /* Echoscribe */ = {
 			isa = PBXGroup;
 			children = (
+				86E4E727275C07FF0078249A /* Modules */,
 				86E4E726275BFF470078249A /* Supporting Files */,
 			);
 			path = Echoscribe;
@@ -64,6 +75,42 @@
 				86E4E720275BF6A60078249A /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86E4E727275C07FF0078249A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				86E4E730275C08A60078249A /* Subscriptions */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		86E4E730275C08A60078249A /* Subscriptions */ = {
+			isa = PBXGroup;
+			children = (
+				86E4E731275C0AD90078249A /* Views */,
+				86E4E72B275C08A20078249A /* SubscriptionsAssembly.swift */,
+				86E4E72A275C08A20078249A /* SubscriptionsViewController.swift */,
+				86E4E728275C08A20078249A /* SubscriptionsPresenter.swift */,
+				86E4E729275C08A20078249A /* SubscriptionsRouter.swift */,
+			);
+			path = Subscriptions;
+			sourceTree = "<group>";
+		};
+		86E4E731275C0AD90078249A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86E4E732275C0AEC0078249A /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86E4E732275C0AEC0078249A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86E4E733275C12330078249A /* SubscriptionsItemCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				86E4E713275BF6A50078249A /* AppDelegate.swift in Sources */,
+				86E4E72E275C08A20078249A /* SubscriptionsViewController.swift in Sources */,
+				86E4E72C275C08A20078249A /* SubscriptionsPresenter.swift in Sources */,
+				86E4E72F275C08A20078249A /* SubscriptionsAssembly.swift in Sources */,
+				86E4E72D275C08A20078249A /* SubscriptionsRouter.swift in Sources */,
+				86E4E734275C12330078249A /* SubscriptionsItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
