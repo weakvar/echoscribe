@@ -112,7 +112,11 @@ final class SubscriptionsItemCell: UITableViewCell {
     }
     
     private func configureAccessoryView() {
-        self.accessoryType = .disclosureIndicator
+        let accessoryImage = UIImage(systemName: "chevron.forward", withConfiguration: UIImage.SymbolConfiguration(pointSize: 14, weight: .medium))
+        let accessoryImageView = UIImageView(image: accessoryImage)
+        accessoryImageView.tintColor = .tertiaryLabel
+        
+        self.accessoryView = accessoryImageView
     }
     
     private func configureSelectedBackgroundView() {

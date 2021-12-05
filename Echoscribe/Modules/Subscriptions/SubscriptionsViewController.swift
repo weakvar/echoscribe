@@ -51,6 +51,8 @@ final class SubscriptionsViewController: UIViewController {
     private func configureNavigationItem() {
         self.navigationItem.title = "Subscriptions".localized()
         self.navigationItem.largeTitleDisplayMode = .always
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
     }
     
     private func configureTableView() {
@@ -66,6 +68,16 @@ final class SubscriptionsViewController: UIViewController {
             tableView.bottomAnchor
                 .constraint(equalTo: self.view.bottomAnchor)
         ])
+    }
+    
+    // MARK: - Private Methods
+    
+    @objc private func editButtonPressed() {
+        // TODO: Implement this method
+    }
+    
+    @objc private func addButtonPressed() {
+        // TODO: Implement this method
     }
     
 }
