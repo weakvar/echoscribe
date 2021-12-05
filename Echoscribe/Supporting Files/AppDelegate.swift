@@ -17,11 +17,13 @@ class AppDelegate: UIResponder {
     // MARK: - Private Methods
     
     private func setRootViewController() {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .systemBackground
+        let viewController = SubscriptionsAssembly.assembly()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.prefersLargeTitles = true
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = viewController
+        window.rootViewController = navigationController
+        window.tintColor = .systemTeal
         window.makeKeyAndVisible()
         
         self.window = window
