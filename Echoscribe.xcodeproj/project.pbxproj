@@ -12,6 +12,8 @@
 		864B982C275D4DE70027CD06 /* SubscriptionServicesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B982B275D4DE70027CD06 /* SubscriptionServicesRepository.swift */; };
 		864B982E275D4E030027CD06 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B982D275D4E030027CD06 /* RemoteService.swift */; };
 		864B9830275D4E160027CD06 /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B982F275D4E160027CD06 /* LocalStorageService.swift */; };
+		864B9833275D50520027CD06 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B9832275D50520027CD06 /* SubscriptionService.swift */; };
+		864B9835275D53560027CD06 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B9834275D53560027CD06 /* Subscription.swift */; };
 		86E4E713275BF6A50078249A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E712275BF6A50078249A /* AppDelegate.swift */; };
 		86E4E71C275BF6A60078249A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E71B275BF6A60078249A /* Assets.xcassets */; };
 		86E4E71F275BF6A60078249A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E71D275BF6A60078249A /* LaunchScreen.storyboard */; };
@@ -30,6 +32,8 @@
 		864B982B275D4DE70027CD06 /* SubscriptionServicesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionServicesRepository.swift; sourceTree = "<group>"; };
 		864B982D275D4E030027CD06 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		864B982F275D4E160027CD06 /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
+		864B9832275D50520027CD06 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		864B9834275D53560027CD06 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		86E4E70F275BF6A50078249A /* Echoscribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoscribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E4E712275BF6A50078249A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E4E71B275BF6A60078249A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		864B9831275D4EFD0027CD06 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				864B9834275D53560027CD06 /* Subscription.swift */,
+				864B9832275D50520027CD06 /* SubscriptionService.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
 		86E4E706275BF6A40078249A = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 		86E4E711275BF6A50078249A /* Echoscribe */ = {
 			isa = PBXGroup;
 			children = (
+				864B9831275D4EFD0027CD06 /* Data Models */,
 				86E4E727275C07FF0078249A /* Modules */,
 				864B9829275D4DBD0027CD06 /* Repositories */,
 				864B982A275D4DC80027CD06 /* Services */,
@@ -229,8 +243,10 @@
 				864B982C275D4DE70027CD06 /* SubscriptionServicesRepository.swift in Sources */,
 				864B982E275D4E030027CD06 /* RemoteService.swift in Sources */,
 				86E4E713275BF6A50078249A /* AppDelegate.swift in Sources */,
+				864B9833275D50520027CD06 /* SubscriptionService.swift in Sources */,
 				864B9830275D4E160027CD06 /* LocalStorageService.swift in Sources */,
 				86E4E72E275C08A20078249A /* SubscriptionsViewController.swift in Sources */,
+				864B9835275D53560027CD06 /* Subscription.swift in Sources */,
 				86E4E72C275C08A20078249A /* SubscriptionsPresenter.swift in Sources */,
 				864B9825275D173B0027CD06 /* String+NSLocalizedString.swift in Sources */,
 				86E4E72F275C08A20078249A /* SubscriptionsAssembly.swift in Sources */,
