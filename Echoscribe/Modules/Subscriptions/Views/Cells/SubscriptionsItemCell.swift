@@ -22,9 +22,6 @@ final class SubscriptionsItemCell: UITableViewCell {
         imageView.layer.cornerRadius = 24
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        // TODO: Remove this hardcode
-        imageView.image = UIImage(named: "logo")
-        
         return imageView
     }()
     
@@ -33,9 +30,6 @@ final class SubscriptionsItemCell: UITableViewCell {
         label.font = .preferredFont(forTextStyle: .body)
         label.textColor = .label
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        // TODO: Remove this hardcode
-        label.text = "Netflix"
         
         return label
     }()
@@ -55,9 +49,6 @@ final class SubscriptionsItemCell: UITableViewCell {
         label.font = .preferredFont(forTextStyle: .subheadline)
         label.textColor = .secondaryLabel
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        // TODO: Remove this hardcode
-        label.text = "18 декабря 2021"
         
         return label
     }()
