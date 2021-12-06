@@ -170,9 +170,12 @@ final class SubscriptionsItemCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func setLogoImage(fromUrl logoUrl: String) {
-        if let url = URL(string: logoUrl) {
-            Nuke.loadImage(with: url, into: logoImageView)
-        }
+        guard let url = URL(string: logoUrl) else { return }
+        
+        let request = ImageRequest(url: url, processors: [.resize(size: CGSize(width: 48, height: 48))])
+        let options = ImageLoadingOptions(transition: .fadeIn(duration: 0.3))
+        
+        Nuke.loadImage(with: request, options: options, into: logoImageView)
     }
     
     private func setName(_ name: String) {
