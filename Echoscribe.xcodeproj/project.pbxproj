@@ -15,6 +15,9 @@
 		864B9833275D50520027CD06 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B9832275D50520027CD06 /* SubscriptionService.swift */; };
 		864B9835275D53560027CD06 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B9834275D53560027CD06 /* Subscription.swift */; };
 		868DC012275E9EE3007B78AA /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 868DC011275E9EE3007B78AA /* Nuke */; };
+		86C0B989275FEA1D008E1ABF /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0B988275FEA1D008E1ABF /* NetworkClient.swift */; };
+		86C0B98C275FEB14008E1ABF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0B98B275FEB14008E1ABF /* HTTPMethod.swift */; };
+		86C0B98E275FF4EA008E1ABF /* RequestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0B98D275FF4EA008E1ABF /* RequestOptions.swift */; };
 		86E4E713275BF6A50078249A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E712275BF6A50078249A /* AppDelegate.swift */; };
 		86E4E71C275BF6A60078249A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E71B275BF6A60078249A /* Assets.xcassets */; };
 		86E4E71F275BF6A60078249A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E71D275BF6A60078249A /* LaunchScreen.storyboard */; };
@@ -35,6 +38,9 @@
 		864B982F275D4E160027CD06 /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
 		864B9832275D50520027CD06 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		864B9834275D53560027CD06 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		86C0B988275FEA1D008E1ABF /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		86C0B98B275FEB14008E1ABF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		86C0B98D275FF4EA008E1ABF /* RequestOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOptions.swift; sourceTree = "<group>"; };
 		86E4E70F275BF6A50078249A /* Echoscribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoscribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E4E712275BF6A50078249A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E4E71B275BF6A60078249A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		864B982A275D4DC80027CD06 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				86C0B98A275FEAFE008E1ABF /* Network */,
 				864B982D275D4E030027CD06 /* RemoteService.swift */,
 				864B982F275D4E160027CD06 /* LocalStorageService.swift */,
 			);
@@ -91,6 +98,16 @@
 				864B9832275D50520027CD06 /* SubscriptionService.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		86C0B98A275FEAFE008E1ABF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				86C0B98B275FEB14008E1ABF /* HTTPMethod.swift */,
+				86C0B98D275FF4EA008E1ABF /* RequestOptions.swift */,
+				86C0B988275FEA1D008E1ABF /* NetworkClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		86E4E706275BF6A40078249A = {
@@ -252,13 +269,16 @@
 				864B982E275D4E030027CD06 /* RemoteService.swift in Sources */,
 				86E4E713275BF6A50078249A /* AppDelegate.swift in Sources */,
 				864B9833275D50520027CD06 /* SubscriptionService.swift in Sources */,
+				86C0B98E275FF4EA008E1ABF /* RequestOptions.swift in Sources */,
 				864B9830275D4E160027CD06 /* LocalStorageService.swift in Sources */,
 				86E4E72E275C08A20078249A /* SubscriptionsViewController.swift in Sources */,
 				864B9835275D53560027CD06 /* Subscription.swift in Sources */,
 				86E4E72C275C08A20078249A /* SubscriptionsPresenter.swift in Sources */,
+				86C0B98C275FEB14008E1ABF /* HTTPMethod.swift in Sources */,
 				864B9825275D173B0027CD06 /* String+NSLocalizedString.swift in Sources */,
 				86E4E72F275C08A20078249A /* SubscriptionsAssembly.swift in Sources */,
 				86E4E72D275C08A20078249A /* SubscriptionsRouter.swift in Sources */,
+				86C0B989275FEA1D008E1ABF /* NetworkClient.swift in Sources */,
 				86E4E734275C12330078249A /* SubscriptionsItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
