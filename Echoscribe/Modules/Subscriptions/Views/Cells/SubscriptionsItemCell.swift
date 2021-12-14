@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Nuke
 
 final class SubscriptionsItemCell: UITableViewCell {
     
@@ -21,9 +22,6 @@ final class SubscriptionsItemCell: UITableViewCell {
         imageView.layer.cornerRadius = 24
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        // TODO: Remove this hardcode
-        imageView.image = UIImage(named: "logo")
-        
         return imageView
     }()
     
@@ -32,9 +30,6 @@ final class SubscriptionsItemCell: UITableViewCell {
         label.font = .preferredFont(forTextStyle: .body)
         label.textColor = .label
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        // TODO: Remove this hardcode
-        label.text = "Netflix"
         
         return label
     }()
@@ -54,9 +49,6 @@ final class SubscriptionsItemCell: UITableViewCell {
         label.font = .preferredFont(forTextStyle: .subheadline)
         label.textColor = .secondaryLabel
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        // TODO: Remove this hardcode
-        label.text = "18 декабря 2021"
         
         return label
     }()
@@ -99,7 +91,17 @@ final class SubscriptionsItemCell: UITableViewCell {
     // MARK: - UITableViewCell Lifecycle
     
     override func prepareForReuse() {
-        // TODO: Implement this method
+        self.logoImageView.image = nil
+        self.nameLabel.text = nil
+        self.paymentDateLabel.text = nil
+    }
+    
+    // MARK: - Public Methods
+    
+    func setup(with subscription: Subscription) {
+        setLogoImage(fromUrl: subscription.service.logoUrl)
+        setName(subscription.service.name)
+        setPaymentDate(subscription.paymentDate)
     }
     
     // MARK: - View Configuration
@@ -163,6 +165,29 @@ final class SubscriptionsItemCell: UITableViewCell {
             labelsStackView.bottomAnchor
                 .constraint(equalTo: self.contentView.bottomAnchor, constant: -8)
         ])
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setLogoImage(fromUrl logoUrl: String) {
+        guard let url = URL(string: logoUrl) else { return }
+        
+        let request = ImageRequest(url: url, processors: [.resize(size: CGSize(width: 48, height: 48))])
+        let options = ImageLoadingOptions(transition: .fadeIn(duration: 0.3))
+        
+        Nuke.loadImage(with: request, options: options, into: logoImageView)
+    }
+    
+    private func setName(_ name: String) {
+        nameLabel.text = name
+    }
+    
+    private func setPaymentDate(_ date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        let paymentDate = dateFormatter.string(from: date)
+        paymentDateLabel.text = paymentDate
     }
     
 }

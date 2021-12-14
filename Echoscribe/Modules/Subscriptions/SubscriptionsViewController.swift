@@ -89,11 +89,18 @@ extension SubscriptionsViewController: SubscriptionsViewProtocol {}
 extension SubscriptionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        if let presenter = presenter {
+            return presenter.subscriptions.count
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SubscriptionsItemCell.reuseIdentifier) else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SubscriptionsItemCell.reuseIdentifier) as? SubscriptionsItemCell else { return UITableViewCell() }
+        if let subscription = presenter?.subscriptions[indexPath.row] {
+            cell.setup(with: subscription)
+        }
         
         return cell
     }
